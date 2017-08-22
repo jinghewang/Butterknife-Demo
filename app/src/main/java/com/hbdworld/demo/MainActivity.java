@@ -97,11 +97,17 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Log.d(TAG, "code: ");
-                        tvResult.setText(json);
+                        //tvResult.setText(json);
+                        responseCallback(json);
                     }
                 });
             }
         });
+    }
+
+    public void responseCallback(String memo){
+        Log.d(TAG, "code: ");
+        tvResult.setText(memo);
     }
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");

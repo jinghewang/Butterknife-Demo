@@ -35,6 +35,20 @@
         android:layout_height="wrap_content" />
 
 
+    <EditText
+        android:id="@+id/tx_url"
+        android:text="http://lz.hbdworld.com.cn/company_v3/wxpay/sdkBarcodePosPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_call"
+        android:text="call"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
 
     <TextView
         android:id="@+id/tv_result"

@@ -19,6 +19,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
+    <Button
+        android:id="@+id/btn_good"
+        android:text="good"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_bad"
+        android:text="bad"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"

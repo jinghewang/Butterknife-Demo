@@ -1,7 +1,7 @@
 package com.hbdworld.demo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tv_result)
     public TextView tvResult;
 
+    @BindView(R.id.btn_good)
+    Button btnGood;
+
+    @BindView(R.id.btn_bad)
+    Button btnBad;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_ok,R.id.btn_cancel})
+    @OnClick({R.id.btn_ok, R.id.btn_cancel})
     public void onClick(View view) {
         //this.btnOk = btnOk;
-        Button btn = (Button)view;
+        Button btn = (Button) view;
         Toast.makeText(this, btn.getText(), Toast.LENGTH_SHORT).show();
 
         tvResult.setText(btn.getText());

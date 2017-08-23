@@ -1,6 +1,8 @@
 package com.hbdworld.demo;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -59,6 +61,35 @@ public class MainActivity extends AppCompatActivity {
 
         tvResult.setText(btn.getText());
     }
+
+    Handler mHandler = new Handler(){
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Log.e(TAG,msg.toString());
+        }
+    };
+
+    @OnClick({R.id.btn_good})
+    public void onGoodClick(Button view)  {
+        //this.btnOk = btnOk;
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                Message message = new Message();
+                message.obj = "----11-22----";
+                mHandler.sendMessage(message);
+            }
+        }).start();
+
+
+        //tvResult.setText(result);
+    }
+
 
     @OnClick({R.id.btn_call})
     public void onCallClick(View view)  {
